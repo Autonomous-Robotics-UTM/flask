@@ -20,7 +20,7 @@ dash_app.layout = html.Div([
 ])
 
 csv_name = str(int(time.time())) + '.csv'
-with open(csv_name, 'w', newline='') as file:
+with open(csv_name, 'w') as file:
     writer = csv.writer(file)
     writer.writerow(["Time", "Steer Command"])
 max_t = 5
@@ -48,7 +48,7 @@ def dashboard():
 def graph_post():
     data = request.get_json()
     time, command = data['time'], data['command']
-    with open(csv_name, 'a', newline='') as file:
+    with open(csv_name, 'a') as file:
         writer = csv.writer(file)
         writer.writerow([time, command])
     return Response('Data Read!', headers={'status': 200})
