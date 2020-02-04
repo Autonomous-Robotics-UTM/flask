@@ -1,11 +1,7 @@
 from flask import Flask, render_template, request, Response
-import plotly
-import plotly.graph_objs as go
 import pandas as pd
 import time
 import csv
-import numpy as np
-import json
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
