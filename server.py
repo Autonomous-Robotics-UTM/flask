@@ -54,4 +54,4 @@ def graph_post():
     return Response('Data Read!', headers={'status': 200})
 
 if __name__ == "__main__":
-    dash_app.run_server(debug=True)
+    dash_app.run_server(port=8080)
