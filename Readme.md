@@ -1,4 +1,4 @@
-# Flask Server
+# Racecar Flask Server
 
 Uses Dash for graphing and Flask for hosting the server
 
@@ -16,6 +16,12 @@ The server is capable of:
     * Graphs are labeled by the time they were plotted
     
 
-## Racecar Console
+## Console
 
 Terminal code repurposed from https://github.com/ethanhuang0526/javascript-iframe-demo maintained by Open Exchange Rates.
+
+The console is capable of:
+
+* Sending commands to the server's system and getting the stdout back
+    * Used to run racecar commands and launch necessary ROS files while not needing to be on the system itself
+

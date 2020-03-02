@@ -183,7 +183,7 @@ def imgs_post():
     return Response('Data Read!', headers={'status': 200})
 
 
-@app.route('/receiver', methods=['POST'])
+@app.route('/receiver', methods=['POST']) #reads the commands coming from the console
 def worker():
     # read json + reply
     result = ""
@@ -194,7 +194,7 @@ def worker():
     return output
 
 
-def run_command(command):
+def run_command(command): #runs commands on the system it is on
     def reader(pipe, queue):
         try:
             with pipe:
